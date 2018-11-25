@@ -1,10 +1,9 @@
-<app-mange-game></app-mange-game>
+<app-mange-game [userA]="userA" [userB]="userB"></app-mange-game>
 <hr>
 <div class="container">
         <div class="row">
-            <div *ngIf="userA.active"> "User A"</div>
-            <div *ngIf="userB.active"> "User B"</div>
-            <div *ngIf="winner">{{ activeUser.sign}}</div>
+            <div *ngIf="userA.active"> Turn - User A</div>
+            <div *ngIf="userB.active"> Turn - User B</div>
         </div>
         <div class="container">
             <div class="row" *ngFor="let row of matrix">
@@ -14,7 +13,5 @@
             </div>
         </div>
 </div>
-
-
 
 <button type="button" (click)="newGame()" class="btn btn-primary">New Game</button>

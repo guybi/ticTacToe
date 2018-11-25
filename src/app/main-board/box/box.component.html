@@ -1,11 +1,13 @@
-<button
-  class="col-md-4 card text-white bg-primary mb-4"
-  (click)="onClickBox()"
-  [disabled]="box.dirty"
-  >
 
-  {{box.sign}}
-  {{box.row}}
-  {{box.col}}
 
-</button>
+<div class="card">
+    <div class="card-body">
+      <button
+        class="card-title col-md-4 card text-white bg-primary mb-4"
+        (click)="onClickBox()"
+        [disabled]="box.dirty"
+        >
+        {{box.sign}}
+      </button>
+    </div>
+  </div>

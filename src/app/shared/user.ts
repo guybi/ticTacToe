@@ -4,6 +4,7 @@ export class User {
     id: number;
     sign = '';
     active = false;
+    score = 0;
     constructor() {
         if (User.count === 0) {
             this.id = 0;

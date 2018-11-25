@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { User } from 'src/app/shared/user';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
   selector: 'app-mange-game',
@@ -7,6 +8,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MangeGameComponent implements OnInit {
 
+  @Input() userA: User;
+  @Input() userB: User;
   constructor() { }
 
   ngOnInit() {
