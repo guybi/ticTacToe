@@ -1,3 +1,20 @@
+<app-mange-game></app-mange-game>
+<hr>
 <div class="container">
-  
+        <div class="row">
+            <div *ngIf="userA.active"> "User A"</div>
+            <div *ngIf="userB.active"> "User B"</div>
+            <div *ngIf="winner">{{ activeUser.sign}}</div>
+        </div>
+        <div class="container">
+            <div class="row" *ngFor="let row of matrix">
+                <div class="col" *ngFor="let col of row">
+                  <app-box [box]="col" (selectedBoxEvent)="onBoxClick($event)"></app-box>
+                </div>
+            </div>
+        </div>
 </div>
+
+
+
+<button type="button" (click)="newGame()" class="btn btn-primary">New Game</button>

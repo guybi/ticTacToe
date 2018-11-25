@@ -1,3 +1,4 @@
 export class Box {
-    constructor(private sign: String) {}
+    public dirty = false;
+    constructor(public sign: String, public row: number, public col: number) {}
 }
